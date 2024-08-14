@@ -27,11 +27,11 @@ local GetFollowerAbilities = C_Garrison.GetFollowerAbilities
 local GetFollowerInfo = C_Garrison.GetFollowerInfo
 local GetFollowers = C_Garrison.GetFollowers
 local HybridScrollFrame_GetOffset = HybridScrollFrame_GetOffset
-local LE_FOLLOWER_TYPE_GARRISON_6_0 = Enum.GarrisonFollowerType.FollowerType_6_0
-local LE_FOLLOWER_TYPE_GARRISON_7_0 = Enum.GarrisonFollowerType.FollowerType_7_0
-local LE_FOLLOWER_TYPE_GARRISON_8_0 = Enum.GarrisonFollowerType.FollowerType_8_0
-local LE_FOLLOWER_TYPE_SHIPYARD_6_2 = Enum.GarrisonFollowerType.FollowerType_6_2
-local LE_GARRISON_TYPE_6_0 = Enum.GarrisonType.Type_6_0
+local LE_FOLLOWER_TYPE_GARRISON_6_0 = Enum.GarrisonFollowerType.FollowerType_6_0_GarrisonFollower
+local LE_FOLLOWER_TYPE_GARRISON_7_0 = Enum.GarrisonFollowerType.FollowerType_7_0_GarrisonFollower
+local LE_FOLLOWER_TYPE_GARRISON_8_0 = Enum.GarrisonFollowerType.FollowerType_8_0_GarrisonFollower
+local LE_FOLLOWER_TYPE_SHIPYARD_6_2 = Enum.GarrisonFollowerType.FollowerType_6_0_Boat
+local LE_GARRISON_TYPE_6_0 = Enum.GarrisonType.Type_6_0_Garrison
 local UnitGUID = UnitGUID
 local _G = _G
 local concat = table.concat
@@ -188,7 +188,7 @@ function event_handlers:ADDON_LOADED(event, addon_loaded)
       addon_env.OrderHallInitUI()
    end
 end
-local loaded, finished = IsAddOnLoaded(addon_name)
+local loaded, finished = C_AddOns.IsAddOnLoaded(addon_name)
 if finished then
    event_handlers:ADDON_LOADED("ADDON_LOADED", addon_name)
 else

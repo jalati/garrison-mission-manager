@@ -3,8 +3,8 @@ if not addon_env.load_this then return end
 
 -- [AUTOLOCAL START]
 local C_Garrison = C_Garrison
-local LE_FOLLOWER_TYPE_GARRISON_6_0 = Enum.GarrisonFollowerType.FollowerType_6_0
-local LE_GARRISON_TYPE_6_0 = Enum.GarrisonType.Type_6_0
+local LE_FOLLOWER_TYPE_GARRISON_6_0 = Enum.GarrisonFollowerType.FollowerType_6_0_GarrisonFollower
+local LE_GARRISON_TYPE_6_0 = Enum.GarrisonType.Type_6_0_Garrison
 local wipe = wipe
 -- [AUTOLOCAL END]
 

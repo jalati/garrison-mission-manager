@@ -28,4 +28,4 @@ a_env.load_another_addon = load_another_addon
 
 if devel_db and devel_db.print_debug then devel_db.print_debug(a_env) end
 
-if load_another_addon then LoadAddOn(load_another_addon) end
+if load_another_addon then C_AddOns.LoadAddOn(load_another_addon) end

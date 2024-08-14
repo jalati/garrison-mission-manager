@@ -9,7 +9,7 @@ if not addon_env.load_this then return end
 local C_Garrison = C_Garrison
 local CreateFrame = CreateFrame
 local GetFollowers = C_Garrison.GetFollowers
-local LE_FOLLOWER_TYPE_GARRISON_7_0 = Enum.GarrisonFollowerType.FollowerType_7_0
+local LE_FOLLOWER_TYPE_GARRISON_7_0 = Enum.GarrisonFollowerType.FollowerType_7_0_GarrisonFollower
 local dump = DevTools_Dump
 -- [AUTOLOCAL END]
 

@@ -10,9 +10,9 @@ local After = C_Timer.After
 local GARRISON_SHIP_OIL_CURRENCY = GARRISON_SHIP_OIL_CURRENCY
 local GetCurrencyInfo = C_CurrencyInfo.GetCurrencyInfo
 local GetFollowerSoftCap = C_Garrison.GetFollowerSoftCap
-local GetItemInfoInstant = GetItemInfoInstant
+local GetItemInfoInstant = C_Item.GetItemInfoInstant
 local GetNumActiveFollowers = C_Garrison.GetNumActiveFollowers
-local LE_FOLLOWER_TYPE_SHIPYARD_6_2 = Enum.GarrisonFollowerType.FollowerType_6_2
+local LE_FOLLOWER_TYPE_SHIPYARD_6_2 = Enum.GarrisonFollowerType.FollowerType_6_0_Boat
 local UnitGUID = UnitGUID
 local match = string.match
 local pairs = pairs
@@ -138,7 +138,7 @@ local function ShipyardInitUI()
 
    addon_env.MissionPage_ButtonsInit(follower_type)
 
-   ShipyardInitUI = nil
+   --ShipyardInitUI = nil
 end
 ShipyardInitUI()
 
@@ -175,6 +175,6 @@ hooksecurefunc(GossipFrame, "Update", function(...)
    end
 
    local max_followers = GetFollowerSoftCap(LE_FOLLOWER_TYPE_SHIPYARD_6_2)
-   local num_active_followers = GetNumActiveFollowers(LE_FOLLOWER_TYPE_SHIPYARD_6_2)
+   local num_active_followers = GetNumActiveFollowers()
    print(GARRISON_FLEET .. ": " .. num_active_followers .. "/" .. max_followers)
 end)
