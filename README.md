@@ -1,0 +1,1 @@
+This is a temporary fork of https://github.com/rowaasr13/garrison-mission-manager to fix issues with 11.0.2
